@@ -49,3 +49,11 @@
   border-radius: 4px;
   border: 0px;
 }
+.flag-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flag {
+  font-size: 2em;
+  margin: 5px 10px;
+}

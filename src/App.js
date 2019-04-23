@@ -89,9 +89,9 @@ export default class App extends Component {
           {!!Object.keys(countries).length && (
             <div className='step'>
               <h1>Selected flags:</h1>
-              <div>
+              <div className='flag-container'>
                 {Object.keys(countries).map(country => 
-                  !!countries[country] && <p key={country}>{country}</p>
+                  !!countries[country] && <p className='flag' key={country}>{country}</p>
                 )}
               </div>
               <button className='button' onClick={this.onClear}>Clear flags</button>
