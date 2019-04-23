@@ -1,3 +1,6 @@
+p {
+  color: #516369;
+}
 .app {
 
 }
@@ -5,7 +8,7 @@
   text-align: center;
 }
 .title {
-  color: #006666;
+  color: #3eb4cd;
 }
 .subtitle {
 
@@ -36,7 +39,7 @@
   padding: 7px 0;
 }
 .list-item:hover {
-  background-color: #008080;
+  background-color: #3eb4cd;
   color: white;
   cursor: pointer;
 }
