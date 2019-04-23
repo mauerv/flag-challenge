@@ -15,11 +15,15 @@
 }
 .step {
   float: left;
-  margin: 5%;
+  margin: 1.5%;
+  width: 30%;
 }
 .step-input {
-  padding: 5px 20px;
-  border-radius: 4px; 
+  padding: 7px 0;
+  border-radius: 3px;
+  width: 100%;
+  margin: auto;
+  border: 0;
 }
 .list {
   list-style: none;
@@ -29,7 +33,7 @@
 .list-item {
   background-color: white;
   border: 1px #bbb solid;
-  padding: 5px 0;
+  padding: 7px 0;
 }
 .list-item:hover {
   background-color: #008080;
@@ -39,7 +43,7 @@
 .checkbox-item {
   background-color: white;
   border: 1px #bbb solid;
-  padding: 5px 5px;
+  padding: 7px 5px;
   text-align: left;
 }
 .button {
@@ -52,8 +56,14 @@
 .flag-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
 }
 .flag {
   font-size: 2em;
   margin: 5px 10px;
+}
+.input-container {
+  width: 70%;
+  margin: auto;
 }

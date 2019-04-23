@@ -39,22 +39,24 @@ export default class App extends Component {
           <div className='step'>
             <h1 className='step-title'>Step 1</h1>
             <p className='step-description'>Select a continent</p>
-            <input 
-              type='text'
-              value={text}
-              onChange={this.onChange}
-              onFocus={this.onContinentFocus}
-              className='step-input'
-            />
-            {continentFocus && (
-              <ul className='list'>
-                {data.map(item => {
-                  if (text.charAt(0).toUpperCase() === item.continent.substr(0, text.length)) {
-                    return <li className='list-item' key={item.continent} onClick={() => this.onContinentSelect(item.continent)}>{item.continent}</li>
-                  }
-                })}
-              </ul>
-            )}
+            <div className='input-container'>
+              <input 
+                type='text'
+                value={text}
+                onChange={this.onChange}
+                onFocus={this.onContinentFocus}
+                className='step-input'
+              />
+              {continentFocus && (
+                <ul className='list'>
+                  {data.map(item => {
+                    if (text.charAt(0).toUpperCase() === item.continent.substr(0, text.length)) {
+                      return <li className='list-item' key={item.continent} onClick={() => this.onContinentSelect(item.continent)}>{item.continent}</li>
+                    }
+                  })}
+                </ul>
+              )}
+            </div>
             {continent && (
               <div>
                 <p>You selected</p>
@@ -66,24 +68,26 @@ export default class App extends Component {
             <div className='step'>
               <h1>Step 2</h1>
               <p>Now select a country.</p>
-              <input 
-                type='text' 
-                readOnly={true}
-                onFocus={this.onCountryFocus}
-                className='step-input'
-              />
-              {countryFocus && (
-                <ul className='list'>
-                  {data.map(item => item.continent === continent && (
-                    item.countries.map(country => (
-                      <div className='checkbox-item' key={country.name}>
-                        <input type='checkbox' onClick={e => this.onCountryToggle(e, country)}/>
-                        <label>{country.name}</label>
-                      </div>
-                    ))
-                  ))}
-                </ul>
-              )}
+              <div className='input-container'>
+                <input 
+                  type='text' 
+                  readOnly={true}
+                  onFocus={this.onCountryFocus}
+                  className='step-input'
+                />
+                {countryFocus && (
+                  <ul className='list'>
+                    {data.map(item => item.continent === continent && (
+                      item.countries.map(country => (
+                        <div className='checkbox-item' key={country.name}>
+                          <input type='checkbox' onClick={e => this.onCountryToggle(e, country)}/>
+                          <label>{country.name}</label>
+                        </div>
+                      ))
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
           )}
           {!!Object.keys(countries).length && (
