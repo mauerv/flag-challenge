@@ -50,9 +50,10 @@ p {
   text-align: left;
 }
 .button {
-  background-color: #006666;
+  background-color: #3eb4cd;
   color: white;
-  padding: 7px 15px;
+  font-weight: bold;
+  padding: 12px 15px;
   border-radius: 4px;
   border: 0px;
 }
